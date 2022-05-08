@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -10,6 +11,11 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: __dirname,
+    }
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
