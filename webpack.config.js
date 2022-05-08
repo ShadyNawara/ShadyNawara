@@ -15,7 +15,9 @@ module.exports = {
   devServer: {
     static: {
       directory: __dirname,
-    }
+    },
+    hot: true,
+    compress: true
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
