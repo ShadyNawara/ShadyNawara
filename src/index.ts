@@ -1,9 +1,4 @@
-function component() {
-  const element = document.createElement('div');
+import './index.css';
 
-  element.innerHTML = "_.join(['Hello', 'webpack'], ' ')";
-
-  return element;
-}
-
-document.body.appendChild(component());
+import './aboutme/aboutme';
+import './explore/explore.ts'
