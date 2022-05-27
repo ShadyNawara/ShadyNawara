@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "@types/three": "^0.140.0",
     "css-loader": "^6.7.1",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
@@ -71,7 +70,6 @@
     "tapable": "^2.2.1",
     "terser": "^5.13.1",
     "terser-webpack-plugin": "^5.3.1",
-    "three": "^0.140.0",
     "to-regex-range": "^5.0.1",
     "tr46": "^1.0.1",
     "uri-js": "^4.4.1",

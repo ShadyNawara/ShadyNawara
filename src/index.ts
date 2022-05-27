@@ -1,4 +1,3 @@
 import './index.css';
 
-import './aboutme/aboutme';
-import './explore/explore.ts'
+import './character/waving/waving'
