@@ -1,4 +1,4 @@
-var speed = 100;
+var speed = 50;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

@@ -24,13 +24,18 @@ a {
     background: #202947;
 }
 
-.intro-wrapper {
-    background: #202947;
+.section-wrapper {
     display: flex;
     padding: 20px 0 30px;
     max-width: 80%;
     margin: 0 auto;
 }
+
+/****************************************************
+*
+* Card section with avatar
+*
+****************************************************/
 
 .picture-cards-wrapper {
     width: 90%;
@@ -96,6 +101,58 @@ a {
     fill: #BDBEC0;
 }
 
+.picture-card--links {
+    text-align: center;
+    visibility: visible;
+    margin-bottom: 40px;
+}
+
+.picture-card--links a {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 25px;
+
+    max-width: 69px;
+    margin-right: 40px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.2s linear;
+
+}
+
+.picture-card--links a .logo {
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.picture-card--links a:last-of-type {
+    margin-right: 0px;
+}
+
+.picture-card--links a:hover {
+    max-width: 200px;
+}
+
+.picture-card--links a:hover .logo {
+    background-position-x: -64px;
+}
+
+.github-logo {
+    background-image: url('images/github.png');
+}
+
+.gitlab-logo {
+    background-image: url('images/gitlab.png');
+}
+
+.linkedin-logo {
+    background-image: url('images/linkedin.png');
+}
+
 .picture-card--contact-btn {
     font-family: 'Inter', sans-serif;
     display: inline-block;
@@ -114,6 +171,12 @@ a {
     margin-left: 2px;
     margin-bottom: 28px;
 }
+
+/****************************************************
+*
+* profile description - intro right side
+*
+****************************************************/
 
 .profile-description-wrapper {
     padding-left: 50px;
@@ -197,11 +260,16 @@ a {
 
 .profile-description--text {
     font-family: 'Inter';
-    padding: 10px 20px;
+    padding: 0px 20px 10px;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
+}
+
+.profile-description--text ul {
+    margin-top: 20px;
+    margin-left: 25px;
 }
 
 span.caret {
@@ -216,64 +284,61 @@ span.caret {
     }
 }
 
-.profile-description--links {
-    text-align: center;
-    visibility: visible;
-    margin-bottom: 40px;
-}
-
-.profile-description--links a {
-    font-family: 'Inter';
-    font-weight: 700;
-    font-size: 25px;
-
-    max-width: 69px;
-    margin-right: 40px;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: max-width 0.2s linear;
-
-}
-
-.profile-description--links a .logo {
-    width: 64px;
-    height: 64px;
-    vertical-align: middle;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.profile-description--links a:last-of-type {
-    margin-right: 0px;
-}
-
-.profile-description--links a:hover {
-    max-width: 200px;
-}
-
-.profile-description--links a:hover .logo {
-    background-position-x: -64px;
-}
-
-.github-logo {
-    background-image: url('images/github.png');
-}
-
-.gitlab-logo {
-    background-image: url('images/gitlab.png');
-}
-
-.linkedin-logo {
-    background-image: url('images/linkedin.png');
-}
-
 .profile-description--closing-html {
     margin-top: auto;
 }
 
+/****************************************************
+*
+* Skills section for languages and frameworks
+*
+****************************************************/
+
+.skills-section .section-wrapper {
+    display: block;
+}
+
+.skills-section h1 {
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+
+    color: #000000;
+}
+
+.skills-section h1 .blue-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #118FC5;
+    display: inline-block;
+}
+
+.skills-section h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    padding-left: 5px;
+
+    color: #118FC5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1550px) {
-    .intro-wrapper {
+    .section-wrapper {
         max-width: 100%;
     }
 
@@ -283,7 +348,7 @@ span.caret {
 }
 
 @media screen and (max-width: 1000px) {
-    .intro-wrapper {
+    .section-wrapper {
         display: block;
     }
 
@@ -304,14 +369,14 @@ span.caret {
         padding: 5px 0px 5px 20px;
     }
 
-    .profile-description--title-text text, .profile-description--title-text circle {
+    .profile-description--title-text text,
+    .profile-description--title-text circle {
         animation: none;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .profile-description--links a:hover {
+    .picture-card--links a:hover {
         max-width: 69px;
     }
 }
-
