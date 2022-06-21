@@ -127,6 +127,7 @@ a {
     vertical-align: middle;
     display: inline-block;
     margin-right: 5px;
+    filter: brightness(100);
 }
 
 .picture-card--links a:last-of-type {
@@ -138,7 +139,7 @@ a {
 }
 
 .picture-card--links a:hover .logo {
-    background-position-x: -64px;
+    filter: none;
 }
 
 .github-logo {
@@ -303,6 +304,7 @@ span.caret {
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
+    margin-top: 10px;
 
     color: #000000;
 }
@@ -321,11 +323,117 @@ span.caret {
     font-weight: 700;
     font-size: 35px;
     padding-left: 5px;
+    margin-top: 5px;
 
     color: #118FC5;
 }
 
+.skills--logo-wrapper {
+    padding: 10px 0;
+    text-align: justify;
+}
 
+.skills--logo-wrapper img {
+    cursor: pointer;
+    filter: grayscale(100%);
+    padding: 20px 50px;
+    margin-top: 20px;
+}
+
+.skills--logo-wrapper img:hover {
+    filter: none;
+}
+
+/****************************************************
+*
+* experience section for jobs and projects
+*
+****************************************************/
+
+.experience-section {
+    background: #202947;
+}
+
+.experience-section .section-wrapper {
+    display: block;
+}
+
+.experience-section h1 {
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    padding-left: 5px;
+
+    margin-top: 10px;
+    color: #fff;
+}
+
+.experience-section h1 .blue-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #118FC5;
+    display: inline-block;
+}
+
+.experience-entry {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-entry div:last-of-type {
+    margin-left: auto;
+}
+
+.experience-description {
+    width: 50%;
+}
+
+.experience-image {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-entry h2,
+.experience-entry h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    padding-left: 5px;
+    margin-top: 5px;
+
+    color: #118FC5;
+}
+
+.experience-entry h3 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.experience-entry p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.experience-image img {
+    cursor: pointer;
+    filter: grayscale(100%);
+    vertical-align: middle;
+    width: 100%;
+}
+
+.experience-image img:hover {
+    filter: none;
+}
 
 
 
@@ -373,10 +481,27 @@ span.caret {
     .profile-description--title-text circle {
         animation: none;
     }
+
+    .experience-section h1 {
+        font-size: 50px;
+    }
+
+    .experience-image {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .picture-card--links a:hover {
         max-width: 69px;
+    }
+
+    .skills--logo-wrapper img {
+        padding: 20px 10px;
+        max-width: 100%;
+    }
+
+    .experience-section h1 {
+        font-size: 40px;
     }
 }
