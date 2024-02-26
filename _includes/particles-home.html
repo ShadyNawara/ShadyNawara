@@ -1,33 +1,63 @@
 <div id="particles-js" class="fullscreen">
+    {% if site.flipPhotoWithMouse %}
+    <style>
+        .profile-pic-underlay {
+            position: fixed;
+            width: 50vw;
+            height: 100vh;
+        }
+        #particles-js:has(.profile-pic-underlay:hover) .particles-photo {
+            transform: scaleX(-1);
+        }
+        .particles-photo {
+            transition: transform 0.2s linear;
+        }
+    </style>
+    <div class="profile-pic-underlay"></div>
+    {% endif %}
     <div class="jumbotron text-center">
-      {% if site.photo %}
-      <img class="particles-photo" src="{{ site.photo }}" style="border-radius: 0 0 50% 50%;"/>
-      {% endif %}
-      <h1 class="particles-title">{{ site.title }}</h1>
-      <h1 class="particles-subtitle">{{ site.taglong }}</h1>
-      <div class="nowrap">
-        
+        {% if site.photo %}
+        <img
+            class="particles-photo"
+            src="{{ site.photo }}"
+            style="border-radius: 0 0 50% 50%"
+        />
+        {% endif %}
+        <h1 class="particles-title">{{ site.title }}</h1>
+        <h1 class="particles-subtitle">{{ site.taglong }}</h1>
+        <div class="nowrap">
+            {% if site.social.github %}
+            <a
+                class="particles-icon"
+                href="https://github.com/{{ site.social.github }}"
+                >{% include svg/github.svg %}</a
+            >
+            {% endif %} {% if site.social.gitlab %}
+            <a
+                class="particles-icon"
+                href="https://gitlab.com/{{ site.social.gitlab }}"
+                >{% include svg/gitlab.svg %}</a
+            >
+            {% endif %} {% if site.social.linkedin %}
+            <a
+                class="particles-icon"
+                href="https://www.linkedin.com/in/{{ site.social.linkedin }}"
+                >{% include svg/linkedin.svg %}</a
+            >
+            {% endif %} {% if site.social.x %}
+            <a
+                class="particles-icon"
+                href="https://twitter.com/{{ site.social.x }}"
+                >{% include svg/x.svg %}</a
+            >
+            {% endif %}
 
-        {% if site.social.github %}
-        <a class="particles-icon" href="https://github.com/{{ site.social.github }}">{% include svg/github.svg %}</a>
-        {% endif %}
-
-        {% if site.social.gitlab %}
-        <a class="particles-icon" href="https://gitlab.com/{{ site.social.gitlab }}">{% include svg/gitlab.svg %}</a>
-        {% endif %}
-        
-        {% if site.social.linkedin %}
-        <a class="particles-icon" href="https://www.linkedin.com/in/{{ site.social.linkedin }}">{% include svg/linkedin.svg %}</a>
-        {% endif %}
-
-        {% if site.social.x %}
-        <a class="particles-icon" href="https://twitter.com/{{ site.social.x }}">{% include svg/x.svg %}</a>
-        {% endif %}
-       
-        <!-- <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a> -->
-      </div>
+            <!-- <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a> -->
+        </div>
     </div>
     <div class="particles-scroll">
-      <a class="particles-icon" href="#scroll">{% include svg/nav-arrow-down.svg %}</a>
+        <a class="particles-icon" href="#scroll"
+            >{% include svg/nav-arrow-down.svg %}</a
+        >
     </div>
-  </div>
+</div>
