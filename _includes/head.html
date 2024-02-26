@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <title>
       {% if page.layout == "home" %}
       {{ site.title }}
@@ -9,7 +9,7 @@
       {{ site.title }} &middot; {{ page.title }}
       {% endif %}
     </title>
-  
+
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.url }}">
     <link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | prepend: site.url }}">
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | prepend: site.url }}">
@@ -23,9 +23,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ '/assets/browserconfig.xml' | prepend: site.url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/atom.xml' | prepend: site.url }}">
-  
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
-        {%- include google-analytics.html -%}
+        {%- include google_analytics.html -%}
     {%- endif -%}
 
     {% seo title=false %}
